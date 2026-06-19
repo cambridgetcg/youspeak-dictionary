@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
+import wordsData from "../dictionary.json";
 
 type Word = {
   word: string;
@@ -12,6 +13,9 @@ type Word = {
   donors: string[];
   score: string;
   examples: string[];
+  confused_with?: string[];
+  etymology?: string;
+  domain?: string;
   file: string;
 };
 
@@ -56,26 +60,14 @@ function donorColor(donor: string): string {
 }
 
 function donorLabel(donor: string): string {
-  const parts = donor.split(":", 2);
-  return parts[0];
+  return donor.split(":", 2)[0];
 }
 
 export default function YouspeakPage() {
-  const [words, setWords] = useState<Word[]>([]);
+  const words = wordsData as Word[];
   const [query, setQuery] = useState("");
   const [tierFilter, setTierFilter] = useState<string>("all");
   const [selected, setSelected] = useState<Word | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("/api/youspeak")
-      .then((r) => r.json())
-      .then((data) => {
-        setWords(Array.isArray(data) ? data : []);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
 
   const filtered = useMemo(() => {
     return words.filter((w) => {
@@ -91,13 +83,11 @@ export default function YouspeakPage() {
     });
   }, [words, query, tierFilter]);
 
-  // Collect all donor languages
   const donorLangs = useMemo(() => {
     const set = new Set<string>();
     words.forEach((w) => w.donors?.forEach((d) => set.add(donorLabel(d))));
     return Array.from(set).sort();
   }, [words]);
-
   return (
     <div style={{ minHeight: "100vh", background: PALETTE.ink, color: PALETTE.bone, fontFamily: "system-ui, sans-serif" }}>
       {/* Header */}
@@ -215,7 +205,7 @@ export default function YouspeakPage() {
         </div>
 
         <p style={{ color: PALETTE.faint, fontSize: "0.85rem", marginBottom: 16 }}>
-          {loading ? "Loading..." : `${filtered.length} word${filtered.length === 1 ? "" : "s"}`}
+          {`${filtered.length} word${filtered.length === 1 ? "" : "s"}`}
         </p>
 
         {/* Word grid */}
