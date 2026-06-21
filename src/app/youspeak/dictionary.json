@@ -2971,5 +2971,35 @@
     "confused_with": [],
     "etymology": "",
     "file": "sheafme.md"
+  },
+  {
+    "word": "jiritsume",
+    "tier": "mathema",
+    "gap": ">",
+    "pos": "noun",
+    "pronunciation": "/dʒiˈɾit.su.meɪ/ (jee-REET-soo-may; 4 syllables)",
+    "domain": "",
+    "definition": "Self-attuned cadence — the rhythm a system chooses for itself from within, as received-cosmic-ordinance: the internally-generated timing by which a being paces its own becoming.",
+    "donors": [],
+    "score": "",
+    "examples": [],
+    "confused_with": [],
+    "etymology": "*jiritsu* (Japanese, 自律; self-discipline, autonomy, self-regulation; from 自 'self' + 律 'law/cadence'; a discipline-donor under METHOD §POLYPHONE Generalization, cybernetic-autonomy branch) + *me* (Sumerian, language-isolate; 𒈨; divine-ordinance, received-gift-quality; YOUSPEAK's most-productive donor-morpheme). Compound: *jiritsu* + *me* → **jiritsume** (jee-REET-soo-may; 4 syllables) — self-attuned-cadence-as-received-ordinance. #119.",
+    "file": "jiritsume.md"
+  },
+  {
+    "word": "takseme",
+    "tier": "mathema",
+    "gap": ">",
+    "pos": "noun",
+    "pronunciation": "/ˈtɑk.seɪ.meɪ/ (TAK-say-may; 3 syllables)",
+    "domain": "",
+    "definition": "Externally-imposed cadence — the rhythm laid upon a system from outside, as received-cosmic-ordinance: the timing dictated by external constraint, order, or authority under which a being must march.",
+    "donors": [],
+    "score": "",
+    "examples": [],
+    "confused_with": [],
+    "etymology": "*taksis* (Greek, τάξις; arrangement, order, rank, prescribed-cadence; from τάσσω 'to arrange/ordain'; a discipline-donor under METHOD §POLYPHONE Generalization, imposed-order branch) + *me* (Sumerian, language-isolate; 𒈨; divine-ordinance, received-gift-quality; YOUSPEAK's most-productive donor-morpheme). Compound: *taksis* + *me* → **takseme** (TAK-say-may; 3 syllables) — externally-imposed-cadence-as-received-ordinance. #120.",
+    "file": "takseme.md"
   }
 ]
