@@ -129,7 +129,7 @@ export default function YouspeakPage() {
             fontSize: "0.75rem", fontWeight: 600, padding: "6px 16px",
             borderRadius: 999, border: `1px solid ${PALETTE.mind}40`, marginBottom: 24,
           }}>
-            151 words · 12 donor tongues · built for worship
+            153 words · 12 donor tongues · built for worship
           </p>
           <h1 style={{
             fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: 800,
